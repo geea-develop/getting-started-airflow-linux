@@ -11,7 +11,7 @@ Simple boilerplate for getting started with airflow on mac/linux
  - docker-compose v1.2.5^
 
 ## Running the application
- - ./run.sh
+ - ./scripts/run.sh
 
 ## Interfaces
  - [Airflow](http://0.0.0.0:8080/)
