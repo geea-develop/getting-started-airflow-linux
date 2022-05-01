@@ -2,21 +2,34 @@
 Simple boilerplate for getting started with airflow on mac/linux
 
 ## Getting started
- - ./scripts/create_folders.sh
- - ./scripts/init.sh
- - ./scripts/run.sh
+ - Create folders as a non-root user: `./scripts/create_folders.sh`
+ - Initialize database and configuration: `./scripts/init.sh`
+ - Run the airflow services: `./scripts/run.sh`
 
 ## Requirements
  - docker
  - docker-compose v1.2.5^
 
 ## Running the application
- - ./scripts/run.sh
+ - `./scripts/run.sh`
 
 ## Interfaces
  - [Airflow](http://0.0.0.0:8080/)
  - [Flower](http://0.0.0.0:5555/)
 
+## Using the airflow cli
+- `./scripts/airflow.sh`
+- `./scripts/airflow.sh info`
+- `./scripts/airflow.sh bash`
+- `./scripts/airflow.sh python`
+
+## Using the rest api
+```
+ENDPOINT_URL="http://localhost:8080/"
+curl -X GET  \
+    --user "airflow:airflow" \
+    "${ENDPOINT_URL}/api/v1/pools"
+```
 
 # References
 - https://airflow.apache.org/
